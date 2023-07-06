@@ -1,0 +1,23 @@
+from preloaded import Node
+
+# class Node(object):
+#     """Node class for reference"""
+#     def __init__(self, data, next=None):
+#         self.data = data
+#         self.next = next
+    
+def get_nth(Node, index):
+    current = Node
+    count = 0
+    
+    if Node == None:
+        raise Exception('Empty list')
+    if index < 0 or index >= 3:
+        raise Exception('Wrong index value')
+
+    while current is not None:
+        if count == index:
+            return current
+        count +=1
+        current = current.next
+    return None
