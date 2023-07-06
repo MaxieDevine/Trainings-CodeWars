@@ -12,12 +12,11 @@ def get_nth(Node, index):
     
     if Node == None:
         raise Exception('Empty list')
-    if index < 0 or index >= 3:
-        raise Exception('Wrong index value')
+
 
     while current is not None:
         if count == index:
             return current
         count +=1
         current = current.next
-    return None
+    raise Exception ('Wrong index value')
