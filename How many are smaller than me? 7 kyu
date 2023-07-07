@@ -1,0 +1,10 @@
+def smaller(arr):
+    # Good Luck!
+    result = []
+    for i, number in enumerate(arr):
+        operator = 0
+        for j in range(i + 1, len(arr)):
+            if number > arr[j]:
+                operator += 1
+        result.append(operator)
+    return result
